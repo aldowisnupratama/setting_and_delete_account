@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:setting_and_component/ui/pages/reason_pages.dart';
+import 'package:setting_and_component/ui/ui.dart';
 
 import '../../shared/shared.dart';
 
@@ -65,7 +66,7 @@ class CostumeDialogWidget extends StatelessWidget {
                   Navigator.push(
                       context,
                       (MaterialPageRoute(
-                          builder: ((context) => const ReasonPage()))));
+                          builder: ((context) => const ReasonPageOptional()))));
                 },
                 style: TextButton.styleFrom(
                     backgroundColor: kPrimaryGreen500,

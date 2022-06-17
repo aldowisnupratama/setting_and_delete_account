@@ -1,15 +1,4 @@
-const String splashScreenPath = "/splashScreen";
-const String loginScreenPath = "/loginScreen";
-const String pengumumanScreenPath = "/pengumumanScreen";
-const String biodataScreenPath = "/biodataScreen";
-const String mainScreenPath = "/mainScreen";
-const String drawerMenuScreenPath = "/drawerScreenMenu";
-const String homeScreenPath = "/homeScreenPath";
-const String updatePasswordScreenPath = "/biodataScreen/updatePasswordScreen";
-const String updateBiodataScreenPath = "/biodataScreen/updateBiodataScreen";
-const String findPages = "/findpages";
-const String resetMsPasswordScreenPath =
-    "/biodataScreen/resetMsPasswordScreenPath";
-const String fpTopicsPage = "/fpTopicsScreen";
-const String searchFinalProjectScreenPath = "/fpTopicsScreen/searchFpScreen";
-const String biodataDiktiScreenPath = "/biodataScreen/biodataDiktiScreen";
+const String settingPagePath = "/setting_page";
+const String deleteAccountPagePath = "/setting_page/delete_account_page";
+const String deleteReasonPagePath = "/setting_page/delete_reason_page";
+const String askEnsurementPagePath = "/setting_page/ask_ensurement_page";

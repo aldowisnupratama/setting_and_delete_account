@@ -15,6 +15,7 @@ class SettingApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [BlocProvider(create: (context) => ReasonListTileCubit())],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoute().generateRoute,
       ),
     );

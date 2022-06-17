@@ -17,43 +17,38 @@ class _ReasonPageState extends State<ReasonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.4,
+        backgroundColor: kWhite100,
+        centerTitle: false,
+        leading: Container(
+            margin: EdgeInsets.all(SizeConfig.blockHorizontal(1.4)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: kGrey100, width: 1)),
+            child: Center(
+              child: IconButton(
+                  color: kBlack600,
+                  splashRadius: 26.0,
+                  iconSize: 30,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back)),
+            )),
+        title: Text(
+          "Setting",
+          style: black500TextStyle.copyWith(fontWeight: bold700, fontSize: 18),
+        ),
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: SizeConfig.blockVertical(4)),
+              margin: EdgeInsets.only(top: SizeConfig.blockVertical(2)),
               child: Column(
                 children: [
-                  Container(
-                    margin:
-                        EdgeInsets.only(left: SizeConfig.blockHorizontal(3)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(color: kGrey100, width: 1)),
-                            child: Center(
-                              child: IconButton(
-                                  splashRadius: 26.0,
-                                  iconSize: 30,
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.arrow_back)),
-                            )),
-                        SizedBox(
-                          width: SizeConfig.blockHorizontal(4),
-                        ),
-                        Text(
-                          "Delete Account",
-                          style: black500TextStyle.copyWith(
-                              fontWeight: bold700, fontSize: 18),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Divider(),
                   Container(
                     margin:
                         EdgeInsets.only(left: SizeConfig.blockHorizontal(3)),
@@ -118,7 +113,7 @@ class _ReasonPageState extends State<ReasonPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(
-                            height: SizeConfig.blockVertical(10),
+                            height: SizeConfig.blockVertical(8),
                             width: SizeConfig.blockHorizontal(45),
                             child: TextButton(
                               style: TextButton.styleFrom(
@@ -136,7 +131,7 @@ class _ReasonPageState extends State<ReasonPage> {
                             ),
                           ),
                           SizedBox(
-                            height: SizeConfig.blockVertical(10),
+                            height: SizeConfig.blockVertical(8),
                             width: SizeConfig.blockHorizontal(45),
                             child: TextButton(
                               style: TextButton.styleFrom(

@@ -9,42 +9,38 @@ class EnsurementPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.4,
+        backgroundColor: kWhite100,
+        centerTitle: false,
+        leading: Container(
+            margin: EdgeInsets.all(SizeConfig.blockHorizontal(1.3)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: kGrey100, width: 1)),
+            child: Center(
+              child: IconButton(
+                  color: kBlack600,
+                  splashRadius: 26.0,
+                  iconSize: 30,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back)),
+            )),
+        title: Text(
+          "Delete Account",
+          style: black500TextStyle.copyWith(fontWeight: bold700, fontSize: 18),
+        ),
+      ),
       backgroundColor: kWhite100,
       body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
-            margin: EdgeInsets.only(top: SizeConfig.blockVertical(4)),
+            margin: EdgeInsets.only(top: SizeConfig.blockVertical(5)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  margin: EdgeInsets.only(left: SizeConfig.blockHorizontal(3)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: kGrey100, width: 1)),
-                          child: Center(
-                            child: IconButton(
-                                splashRadius: 26.0,
-                                iconSize: 30,
-                                onPressed: () {},
-                                icon: const Icon(Icons.arrow_back)),
-                          )),
-                      SizedBox(
-                        width: SizeConfig.blockHorizontal(4),
-                      ),
-                      Text(
-                        "Delete Account",
-                        style: black500TextStyle.copyWith(
-                            fontWeight: bold700, fontSize: 18),
-                      ),
-                    ],
-                  ),
-                ),
-                const Divider(),
                 SizedBox(
                     height: SizeConfig.blockVertical(20),
                     width: SizeConfig.blockVertical(20),
